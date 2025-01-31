@@ -8,11 +8,11 @@ manifest:
       url-base: https://github.com/Silcantar
     - name: urob
       url-base: https://github.com/urob
-    - name: invertd
+    - name: invrtd
       url-base: https://github.com/invertd
   projects:
     - name: zmk
-      remote: invertd #zmkfirmware
+      remote: invrtd #zmkfirmware
       revision: nice!view-180 #main
       import: app/west.yml
     - name: nicehatharry
