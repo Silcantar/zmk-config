@@ -22,7 +22,7 @@ manifest:
       clone-depth: 1
       revision: main
     - name: zmk-helpers
-      remote: urom
+      remote: urob
       revision: main
   self:
     path: config
