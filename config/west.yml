@@ -9,7 +9,7 @@ manifest:
     - name: urob
       url-base: https://github.com/urob
     - name: invrtd
-      url-base: https://github.com/invertd
+      url-base: https://github.com/invrtd
   projects:
     - name: zmk
       remote: invrtd #zmkfirmware
