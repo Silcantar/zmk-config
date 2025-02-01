@@ -10,11 +10,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 #include "behaviors.dtsi"
+#include "macros.dtsi"
 
 #define DEFAULT 0
 #define NUM 1
 #define NAV 2
 #define FUNC 3
+
+&mt {
+	tapping-term-ms = <300>;
+}
 
  / {
 	conditional_layers {
@@ -22,21 +27,6 @@
 		tri_layer {
 			if-layers = <NUM NAV>;
 			then-layer = <FUNC>;
-		};
-	};
-
-	macros {
-		sel_word: select_word {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_press &kp LCTRL>
-				, <&macro_tap &kp LEFT>
-				, <&macro_press &kp LSHFT>
-				, <&macro_tap &kp RIGHT>
-				, <&macro_release &kp LSHFT>
-				, <&macro_release &kp LCTRL>
-				;
 		};
 	};
 

@@ -1,0 +1,19 @@
+#include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+
+/ {
+	macros {
+		sel_word: select_word {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press &kp LCTRL>
+				, <&macro_tap &kp LEFT>
+				, <&macro_press &kp LSHFT>
+				, <&macro_tap &kp RIGHT>
+				, <&macro_release &kp LSHFT>
+				, <&macro_release &kp LCTRL>
+				;
+		};
+	};
+};
