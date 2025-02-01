@@ -78,9 +78,9 @@
 
 							&kp A			&kp R			&kp S			&kp P								&kp L			&kp E			&kp I			&kp O
 
-					&kp X			&kp V			&kp C			&kp T			&kp B				&kp J			&kp N			&kp K			&comm_scln		&dot_cln
+					&kp X			&kp V			&kp C			&kp T			&kp G				&kp M			&kp N			&kp K			&comm_scln		&dot_cln
 
-											&caps_word		&kp D			&kp G								&kp M			&kp H			&kp RGUI
+											&caps_word		&kp D			&kp B								&kp J			&kp H			&kp RGUI
 
 										&mt LCTRL RETURN	&mt LSHIFT SPACE	&mt LALT LS(TAB)		&mt RALT TAB	&mt RSHIFT BSPC		&mt RCTRL ESC
 
