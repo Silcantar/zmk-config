@@ -7,6 +7,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <behaviors.dtsi>
 #include "zmk-helpers/helper.h"
+#include <dt-bindings/zmk/bt.h>
+
+#include "mod_morph.dtsi"
 
 #define DEFAULT 0
 #define NUM 1
@@ -14,63 +17,7 @@
 #define FUNC 3
 
  / {
-	behaviors {
-		bspc_del: backspace_delete {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp BACKSPACE>, <&kp DELETE>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		
-		comm_scln: comma_semicolon {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp COMMA>, <&kp SEMICOLON>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-
-		dot_cln: dot_colon {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp DOT>, <&kp COLON>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		
-		under_minus: underscore_minus {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp UNDERSCORE>, <&kp MINUS>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-
-		brack: brackets {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-
-		brace: braces {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-
-		paren: parentheses {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-
-		angle: anglebrackets {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-	};
+	
 
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
@@ -99,7 +46,7 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-			display-name = "Base Layer";
+			display-name = "Colemak";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
 			//	|		J		|		Q		|		W		|		E		|									|		I		|		O		|		P		|	   ' "		|
@@ -127,13 +74,13 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp J			&kp Q			&kp W			&kp E												&kp I			&kp O			&kp P			&kp SQT
+					&kp APOS		&kp Q			&kp W			&kp F												&kp U			&kp Y			&kp Z			&under_minus
 
-							&kp A			&kp S			&kp D			&kp R								&kp U			&kp K			&kp L			&kp B
+							&kp A			&kp R			&kp S			&kp P								&kp L			&kp E			&kp I			&kp O
 
-					&kp Z			&kp X			&kp C			&kp F			&kp T				&kp Y			&kp N			&comm_scln		&dot_cln		&kp SLASH
+					&kp X			&kp V			&kp C			&kp T			&kp B				&kp J			&kp N			&kp K			&comm_scln		&dot_cln
 
-											&kp CAPS		&kp V			&kp G								&kp H			&kp M			&kp RGUI
+											&caps_word		&kp D			&kp G								&kp M			&kp H			&kp RGUI
 
 										&mt LCTRL RETURN	&mt LSHIFT SPACE	&mt LALT LS(TAB)		&mt RALT TAB	&mt RSHIFT BSPC		&mt RCTRL ESC
 
@@ -142,7 +89,7 @@
 		};
 
 		numeric {
-			display-name = "Numeric Layer";
+			display-name = "Numeric";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
 			//	|		&		|		\		|		!		|		^		|									|		8		|		9		|		*		|	   - _		|
@@ -185,7 +132,7 @@
 		};
 
 		navigation {
-			display-name = "Navigation Layer";
+			display-name = "Navigate";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
 			//	|	   Redo		|	   Top		|	   Home		|		Up		|									|	  Print		|	 Save As	|  Print Screen	|	   Help		|
@@ -228,7 +175,7 @@
 		};
 
 		function {
-			display-name = "Function Layer";
+			display-name = "Function";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
 			//	|	  Reset		|	   F23		|  Pause Break	|	   F11		|									|	   F12		| Studio Unlock	|	   F24		|   Bootloader	|
@@ -256,13 +203,13 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&sys_reset		&kp F23			&kp PAUSE_BREAK	&kp F11												&kp F12			&studio_unlock	&kp F24			&bootloader
+					&sys_reset		&bt BT_PRV		&kp PAUSE_BREAK	&kp F11												&kp F12			&studio_unlock	&bt BT_NXT		&bootloader
 
 							&kp F1			&kp F2			&kp F3			&kp INSERT							&kp SCROLLLOCK	&kp F8			&kp F9			&kp F10
 
 					&kp F13			&kp F14			&kp F15			&kp F4			&kp F5				&kp F6			&kp F7			&kp F20			&kp F21			&kp F22
 
-											&trans			&kp F16			&kp F17								&kp F18			&kp F19			&trans
+											&			&kp F16			&kp F17								&kp F18			&kp F19			&trans
 
 													&trans			&trans			&trans				&trans			&trans			&trans
 
