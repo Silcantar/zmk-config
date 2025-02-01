@@ -1,4 +1,8 @@
-behaviors {
+#include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+
+/ {
+    behaviors {
 		bspc_del: backspace_delete {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -55,3 +59,4 @@ behaviors {
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 	};
+};
