@@ -1,6 +1,3 @@
-#include <dt-bindings/zmk/keys.h>
-#include <behaviors.dtsi>
-
 / {
     behaviors {
 		bspc_del: backspace_delete {

@@ -1,6 +1,3 @@
-#include <dt-bindings/zmk/keys.h>
-#include <behaviors.dtsi>
-
 / {
 	macros {
 		sel_word: select_word {

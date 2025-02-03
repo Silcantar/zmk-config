@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define DEFAULT 0
+#define COL 0
 #define NUM 1
 #define NAV 2
 #define FUNC 3
@@ -35,7 +35,7 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		default_layer {
+		colemak {
 			display-name = "Colemak";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|0				|1				|2				|3				|									|4				|5				|6				|7				|
