@@ -1,0 +1,20 @@
+#include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+
+/ {
+    behaviors {
+        td_num: tap_dance_numeric {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sl NUM>, <&to NUM>;
+        };
+
+        td_nav: tap_dance_navigate {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sl NAV>, <&to NAV>;
+        }
+    };
+}
