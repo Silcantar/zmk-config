@@ -44,5 +44,5 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-    }
-}
+    };
+};

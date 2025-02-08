@@ -19,41 +19,41 @@
             #binding-cells = <0>;
             tapping-term-ms = <tap_term_pinky>;
             bindings = <&ht0 LGUI &angle>, <&oc_set LESS_THAN GREATER_THAN>;
-        }
+        };
 
         td_brack: tap_dance_square_brackets {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <tap_term_ring>;
             bindings = <&ht0 LALT &brack>, <&oc_set LEFT_BRACKET RIGHT_BRACKET>;
-        }
+        };
 
         td_brace: tap_dance_braces {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <tap_term_middle>;
             bindings = <&ht0 LCTL &brace>, <&oc_set LEFT_BRACE RIGHT_BRACE>;
-        }
+        };
 
         td_paren: tap_dance_parentheses {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <tap_term_index>;
             bindings = <&ht0 LSFT &paren>, <&oc_set LEFT_PARENTHESIS RIGHT_PARENTHESIS>;
-        }
+        };
 
         td_dquote: tap_dance_double_quote {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <tap_term_pinky>;
             bindings = <&kp DOUBLE_QUOTES>, <&oc_set DOUBLE_QUOTES DOUBLE_QUOTES>;
-        }
+        };
 
         td_squote: tap_dance_single_quotes {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <tap_term_pinky>;
             bindings = <&kp APOS>, <&oc_set APOS APOS>;
-        }
+        };
     };
 };
