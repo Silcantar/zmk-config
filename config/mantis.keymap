@@ -9,15 +9,23 @@
 #define NAV 2
 #define FUNC 3
 
+#define tap_term_thumb 250
+#define tap_term_index 200
+#define tap_term_middle 250
+#define tap_term_ring 300
+#define tap_term_pinky 300
+
 #include <dt-bindings/zmk/keys.h>
 #include <behaviors.dtsi>
 #include "zmk-helpers/helper.h"
 #include <dt-bindings/zmk/bt.h>
 
-#include "combos.dtsi"
+//#include "combos.dtsi"
 #include "macros.dtsi"
-#include "mod-morph.dtsi"
-#include "tap-dance.dtsi"
+#include "unicode.dtsi"
+#include "behaviors/hold-tap.dtsi"
+#include "behaviors/mod-morph.dtsi"
+#include "behaviors/tap-dance.dtsi"
 
 &mt {
 	tapping-term-ms = <300>;
@@ -39,7 +47,7 @@
 			display-name = "Colemak";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|0				|1				|2				|3				|									|4				|5				|6				|7				|
-			//	|	   ' "		|		Q		|		W		|		F		|									|		U		|		Y		|		Z		|	   _ -		|
+			//	|		B		|	   ' "		|		W		|		F		|									|		U		|		Y		|		J		|	   _ -		|
 			//	|				|				|				|				|									|				|				|				|				|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
 			//			|8	   LGUI		|9	   LAlt		|10	  LCtrl		|11				|					|12				|13	   RCtrl	|14	   RAlt		|15	   RGUI		|
@@ -51,7 +59,7 @@
 			//	|				|				|				|		T		|				|	|				|		N		|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|27				|28				|29				|					|30				|31				|32				|
-			//							|	Caps Word	|		D		|		B		|					|		J		|		H		|	  RGUI		|
+			//							|	   Esc		|		D		|		Q		|					|		Z		|		H		|	Caps Word	|
 			//							|				|				|				|					|				|				|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
 			//									|33	  LCtrl		|34	  LShift	|35	   LAlt		|	|36	   RAlt		|37	  RShift	|38	  RCtrl		|
@@ -64,15 +72,15 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp APOS		&kp Q			&kp W			&kp F												&kp U			&kp Y			&kp Z			&under_minus
+					&kp B			&kp APOS		&kp W			&kp F												&kp U			&kp Y			&kp J			&under_minus
 
-							&mt LGUI A		&mt LALT R		&mt LCTL S		&kp P								&kp L			&mt RCTL E		&mt RALT I		&mt RGUI O
+							&ht4 LGUI A		&ht3 LALT R		&ht2 LCTL S		&kp P								&kp L			&ht2 RCTL E		&ht3 RALT I		&ht4 RGUI O
 
-					&kp X			&kp V			&kp C			&mt LSFT T		&kp G				&kp M			&mt RSFT N		&kp K			&comm_scln		&dot_cln
+					&kp X			&kp V			&kp C			&ht1 LSFT T		&kp G				&kp M			&ht1 RSFT N		&kp K			&comm_scln		&dot_cln
 
-											&kp ESC			&kp D			&kp B								&kp J			&kp H			&caps_word
+											&kp ESC			&kp D			&kp Q								&kp Z			&kp H			&caps_word
 
-										&mt LCTRL RETURN	&mt LSHIFT SPACE	&mt LALT LS(TAB)		&mt RALT TAB	&mt RSHIFT BSPC		&mt RCTRL ESC
+													&ht0 LSFT RET	&kp SPACE		&ht0 LALT LS(TAB)	&ht0 RALT TAB	&kp BSPC		&ht0 RSHIFT DEL
 
 																			&td_num								&td_nav
 			>;
@@ -86,7 +94,7 @@
 			//	|				|				|				|				|									|				|				|				|				|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
 			//			|				|				|				|				|					|				|				|				|				|
-			//			|		@		|	   [ ]		|	   { }		|		%		|					|		7		|		5		|		6		|		0		|
+			//			|	   < >		|	   [ ]		|	   { }		|		%		|					|		7		|		5		|		6		|		0		|
 			//			|				|				|				|				|					|				|				|				|				|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
 			//	|				|				|				|				|				|	|				|				|				|				|				|
@@ -94,7 +102,7 @@
 			//	|				|				|				|				|				|	|				|				|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|				|				|				|					|				|				|				|
-			//							|	  trans		|		=		|	   < >		|					|		+		|		1		|	  trans		|
+			//							|	  trans		|		=		|		@		|					|		+		|		1		|	  trans		|
 			//							|				|				|				|					|				|				|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
 			//									|				|				|				|	|				|				|				|
@@ -107,13 +115,13 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp AMPS		&kp BSLH		&kp EXCL		&kp CARET											&kp N8			&kp N9			&kp STAR		&kp MINUS
+					&amp_intb		&kp BSLH		&excl_iexcl		&caret_deg											&n8_inf			&n9_micro		&star_mult	&kp MINUS
 
-							&kp AT			&brack			&brace			&kp PERCENT							&kp N7			&kp N5			&kp N6			&kp N0
+							&td_angle		&td_brack		&td_brace		&percent_euro						&n7_sqrt		&n5_E			&n6_F			&n0_000
 
-					&kp GRAVE		&kp HASH		&kp DOLLAR		&paren			&kp QMARK			&kp SLASH		&kp N4			&kp N2			&kp N3			&kp DOT
+					&grave_acute	&hash_gbp		&dollar_cent	&td_paren		&qmark_iques		&slash_div		&n4_D			&n2_B			&n3_C		&dot_cln
 
-											&trans			&kp EQUAL		&angle								&kp PLUS		&kp N1			&trans
+											&trans			&equal_neq		&at_tilde							&plus_plmn		&n1_A			&trans
 
 													&trans			&trans			&trans				&trans			&trans			&trans
 
@@ -152,9 +160,9 @@
 			bindings = <
 					&kp LC(LS(Z))	&kp LC(HOME)	&kp HOME		&kp UP												&kp LC(P)		&kp F12			&kp PRINTSCREEN	&kp F1
 
-							&kp LC(END)		&kp LEFT		&kp DOWN		&kp END								&kp F5			&kp F2			&kp LC(S)		&kp LC(O)
+							&kp LC(END)		&kp LEFT		&kp DOWN		&kp END								&kp F5			&ht2 RCTL F2	&ht3 LALT LC(S)	&ht4 RGUI LC(O)
 
-					&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp RIGHT		&kp PG_UP			&kp LG(DOT)		&kp LC(N)		&kp LC(H)		&kp LC(A)		&sel_word
+					&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp RIGHT		&kp PG_UP			&kp LG(DOT)		&ht1 RSFT LC(N)	&kp LC(H)		&kp LC(A)		&sel_word
 
 											&trans			&kp LC(V)		&kp PG_DN							&kp LC(Q)		&kp LC(F)		&trans
 
@@ -195,9 +203,9 @@
 			bindings = <
 					&sys_reset		&bt BT_PRV		&kp PAUSE_BREAK	&kp F11												&kp F12			&studio_unlock	&bt BT_NXT		&bootloader
 
-							&kp F1			&kp F2			&kp F3			&kp INSERT							&kp SCROLLLOCK	&kp F8			&kp F9			&kp F10
+							&ht4 LGUI F1	&ht3 LALT F2	&ht2 LCTL F3	&kp INSERT							&kp SCROLLLOCK	&ht2 RCTL F8	&ht3 LALT F9	&ht4 RGUI F10
 
-					&kp F13			&kp F14			&kp F15			&kp F4			&kp F5				&kp F6			&kp F7			&kp F20			&kp F21			&kp F22
+					&kp F13			&kp F14			&kp F15			&ht1 LSFT F4	&kp F5				&kp F6			&ht1 RSFT F7	&kp F20			&kp F21			&kp F22
 
 											&trans			&kp F16			&kp F17								&kp F18			&kp F19			&trans
 
