@@ -14,7 +14,7 @@
 		};
 
 		oc_set: open_close_symbol_set {
-			compatible = "zmk,behavior-macro";
+			compatible = "zmk,behavior-macro-two-param";
 			#binding-cells = <2>;
 			bindings
 				= <&macro_param_1to1>
