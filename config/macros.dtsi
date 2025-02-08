@@ -25,7 +25,7 @@
 				;
 		};
 
-		000: triple_zero{
+		t0: triple_zero {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings

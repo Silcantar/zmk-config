@@ -178,7 +178,7 @@
 		n0_000: n0_000 {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht4 RGUI N0>, <&000>;
+			bindings = <&ht4 RGUI N0>, <&t0>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
