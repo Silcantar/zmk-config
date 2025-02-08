@@ -72,7 +72,7 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp B			&kp APOS		&kp W			&kp F												&kp U			&kp Y			&kp J			&under_minus
+					&kp B			&quote_tds		&kp W			&kp F												&kp U			&kp Y			&kp J			&under_minus
 
 							&ht4 LGUI A		&ht3 LALT R		&ht2 LCTL S		&kp P								&kp L			&ht2 RCTL E		&ht3 RALT I		&ht4 RGUI O
 
