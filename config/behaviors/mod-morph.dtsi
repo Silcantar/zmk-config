@@ -1,12 +1,5 @@
 / {
     behaviors {
-		sp: shift_pair {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <2>;
-			bindings = <&kp>, <&kp>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-
 		bspc_del: backspace_delete {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
