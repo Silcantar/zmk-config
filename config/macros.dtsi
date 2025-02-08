@@ -23,9 +23,9 @@
 				, <&macro_press &kp MACRO_PLACEHOLDER>
 				, <&macro_press &kp LEFT>
 				;
-		}
+		};
 
-		t0: triple_zero{
+		000: triple_zero{
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
