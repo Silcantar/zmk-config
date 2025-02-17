@@ -1,0 +1,215 @@
+#define COMPOSE_KEY F24
+
+/ {
+	macros {
+		compose_begin: begin_unicode_compose_sequence {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press &kp COMPOSE_KEY>
+				, <&macro_tap &kp U>
+				;
+		};
+
+		compose_end: end_unicode_compose_sequence {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_release &kp COMPOSE_KEY>;
+		};
+
+		iexcl: inverted_exclamation {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp A>
+				, <&macro_tap &kp N1>
+				, <&compose_end>
+				;
+		};
+
+		cent: cent_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp A>
+				, <&macro_tap &kp N2>
+				, <&compose_end>
+				;
+		};
+
+		gbp: uk_pound_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp A>
+				, <&macro_tap &kp N3>
+				, <&compose_end>
+				;
+		};
+
+		deg: degree_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp B>
+				, <&macro_tap &kp N0>
+				, <&compose_end>
+				;
+		};
+
+		plmn: plus_or_minus {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp B>
+				, <&macro_tap &kp N1>
+				, <&compose_end>
+				;
+		};
+
+		acute: acute {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp B>
+				, <&macro_tap &kp N4>
+				, <&compose_end>
+				;
+		};
+
+		micro: micro_symbol {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp B>
+				, <&macro_tap &kp N5>
+				, <&compose_end>
+				;
+		};
+
+		iques: inverted_question {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp B>
+				, <&macro_tap &kp F>
+				, <&compose_end>
+				;
+		};
+
+		mult: multiplication_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp D>
+				, <&macro_tap &kp N7>
+				, <&compose_end>
+				;
+		};
+
+		div: division_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp F>
+				, <&macro_tap &kp N7>
+				, <&compose_end>
+				;
+		};
+
+		intb: interrobang {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N3>
+				, <&macro_tap &kp D>
+				, <&compose_end>
+				;
+		};
+
+		euro: euro_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp A>
+				, <&macro_tap &kp N0>
+				, <&compose_end>
+				;
+		};
+
+		sqrt: square_root {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N1>
+				, <&macro_tap &kp A>
+				, <&compose_end>
+				;
+		};
+
+		inf: infinty_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N1>
+				, <&macro_tap &kp E>
+				, <&compose_end>
+				;
+		};
+
+		neq: not_equal_sign {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N6>
+				, <&macro_tap &kp N0>
+				, <&compose_end>
+				;
+		};
+	};
+};
