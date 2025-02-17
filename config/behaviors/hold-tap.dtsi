@@ -9,10 +9,19 @@
             bindings = <&kp>, <&kp>;
         };
 
+        ht1a: mod_tap_inner {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <tap_term_inner>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        }
+
         ht1: mod_tap_index {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <tap_term_thumb>;
+            tapping-term-ms = <tap_term_index>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -21,7 +30,7 @@
         ht2: mod_tap_middle {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <tap_term_thumb>;
+            tapping-term-ms = <tap_term_middle>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -30,7 +39,7 @@
         ht3: mod_tap_ring {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <tap_term_thumb>;
+            tapping-term-ms = <tap_term_ring>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -39,7 +48,7 @@
         ht4: mod_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <tap_term_thumb>;
+            tapping-term-ms = <tap_term_pinky>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;

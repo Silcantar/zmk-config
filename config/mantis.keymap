@@ -10,10 +10,12 @@
 #define FUNC 3
 
 #define tap_term_thumb 250
+#define tap_term_inner 250
 #define tap_term_index 200
 #define tap_term_middle 250
 #define tap_term_ring 300
 #define tap_term_pinky 300
+#define tap_term_outer 350
 
 #include <dt-bindings/zmk/keys.h>
 #include <behaviors.dtsi>
@@ -28,7 +30,7 @@
 #include "behaviors/tap-dance.dtsi"
 
 &mt {
-	tapping-term-ms = <300>;
+	tapping-term-ms = <250>;
 };
 
  / {
@@ -46,25 +48,25 @@
 		colemak {
 			display-name = "Colemak";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
-			//	|0				|1				|2				|3				|									|4				|5				|6				|7				|
-			//	|		B		|	   ' "		|		W		|		F		|									|		U		|		Y		|		J		|	   _ -		|
+			//	|0	Ins Symbol	|1	   Open		|2	   Save		|3	   Edit		|									|4	  Print		|5	  Save As	|6	   Help		|7 Print Screen	|
 			//	|				|				|				|				|									|				|				|				|				|
+			//	|		B		|	   ' "		|		W		|		F		|									|		U		|		Y		|		J		|	   _ -		|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
-			//			|8	   LGUI		|9	   LAlt		|10	  LCtrl		|11				|					|12				|13	   RCtrl	|14	   RAlt		|15	   RGUI		|
-			//			|				|				|				|		P		|					|		L		|				|				|				|
-			//			|		A		|		R		|		S		|				|					|				|		E		|		I		|		O		|
+			//			|8	   LGUI		|9	   LAlt		|10	  LCtrl		|11	   New		|					|12	  Refresh	|13	   RCtrl	|14	   RAlt		|15	   RGUI		|
+			//			|				|				|				|				|					|				|				|				|				|
+			//			|		A		|		R		|		S		|		P		|					|		L		|		E		|		I		|		O		|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
-			//	|16				|17				|18				|19	  LShift	|20				|	|21				|23	  RShift	|24				|25				|26				|
-			//	|		X		|		V		|		C		|				|		G		|	|		M		|				|		K		|	   , ;		|	   . :		|
-			//	|				|				|				|		T		|				|	|				|		N		|				|				|				|
+			//	|16	   Undo		|17	   Cut		|18	   Copy		|19	  LShift	|20	   RAlt		|	|21	   RAlt		|23	  RShift	|24	  Replace	|25	 Select All	|26				|
+			//	|				|				|				|				|				|	|				|				|				|				|				|
+			//	|		X		|		V		|		C		|		T		|		G		|	|		M		|		N		|		K		|	   , ;		|	   . :		|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
-			//							|27				|28				|29				|					|30				|31				|32				|
-			//							|	   Esc		|		D		|		Q		|					|		Z		|		H		|	Caps Word	|
-			//							|				|				|				|					|				|				|				|
+			//							|27				|28	  Paste		|29	   Redo		|					|30	   Quit		|31	   Find		|32				|
+			//							|	   Esc		|				|				|					|				|				|	Caps Word	|
+			//							|				|		D		|		Q		|					|		Z		|		H		|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
-			//									|33	  LCtrl		|34	  LShift	|35	   LAlt		|	|36	   RAlt		|37	  RShift	|38	  RCtrl		|
+			//									|33	  LShift	|34				|35	   LAlt		|	|36	   RAlt		|37				|38	  RShift	|
 			//									|				|				|				|	|				|				|				|
-			//									|	  Return	|	  Space		|	   LTab		|	|	   RTab		|	Backspace	|	  Escape	|
+			//									|	  Return	|	  Space		|	   LTab		|	|	   RTab		|	Backspace	|	  Delete	|
 			//									'---------------'-------,-------'-------,-------'	'-------,-------'-------,-------'---------------'
 			//															|39				|					|40				|
 			//															|	 Numeric	|					|	 Function	|
@@ -72,13 +74,13 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp B			&quote_tds		&kp W			&kp F												&kp U			&kp Y			&kp J			&under_minus
+					&ht4 LG(DOT) B	&quote_tds		&ht3 LC(S) W	&ht2 F2 F											&ht2 LC(P) U	&ht3 LC(LS(S)) Y &ht4 F1 J		&under_minus
 
-							&ht4 LGUI A		&ht3 LALT R		&ht2 LCTL S		&kp P								&kp L			&ht2 RCTL E		&ht3 RALT I		&ht4 RGUI O
+							&ht4 LGUI A		&ht3 LALT R		&ht2 LCTL S		&ht1 LC(N) P						&ht1 F5 L		&ht2 RCTL E		&ht3 LALT I		&ht4 RGUI O
 
-					&kp X			&kp V			&kp C			&ht1 LSFT T		&kp G				&kp M			&ht1 RSFT N		&kp K			&comm_scln		&dot_cln
+					&ht4 LC(Z) X	&ht3 LC(X) V	&ht2 LC(C) C	&ht1 LSFT T		&ht1a RALT G		&ht1a RALT M	&ht1 RSFT N		&ht2 LC(H) K	&comm_scln		&dot_cln
 
-											&kp ESC			&kp D			&kp Q								&kp Z			&kp H			&caps_word
+											&kp ESC			&ht1 LC(V) D	&ht1a LC(LS(Z)) Q					&ht1a LC(Q) Z	&ht1 LC(F)		&caps_word
 
 													&ht0 LSFT RET	&kp SPACE		&ht0 LALT LS(TAB)	&ht0 RALT TAB	&kp BSPC		&ht0 RSHIFT DEL
 

@@ -10,7 +10,7 @@
 		comm_scln: comma_semicolon {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp COMMA>, <&kp SEMICOLON>;
+			bindings = <&ht3 LC(A) COMMA>, <&ht3 LC(A) SEMICOLON>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
@@ -24,7 +24,7 @@
 		under_minus: underscore_minus {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp UNDERSCORE>, <&kp MINUS>;
+			bindings = <&ht4 PRINTSCREEN UNDERSCORE>, <&ht4 PRINTSCREEN MINUS>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
@@ -38,28 +38,28 @@
 		brack: brackets {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht3 LALT LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+			bindings = <&ht3 LALT LEFT_BRACKET>, <&ht3 LALT RIGHT_BRACKET>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		brace: braces {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht2 LCTL LEFT_BRACE>, <&kp RIGHT_BRACE>;
+			bindings = <&ht2 LCTL LEFT_BRACE>, <&ht2 LCTL RIGHT_BRACE>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		paren: parentheses {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht1 LSFT LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+			bindings = <&ht1 LSFT LEFT_PARENTHESIS>, <&ht1 LSFT RIGHT_PARENTHESIS>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		angle: anglebrackets {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht4 LGUI LESS_THAN>, <&kp GREATER_THAN>;
+			bindings = <&ht4 LGUI LESS_THAN>, <&ht4 LGUI GREATER_THAN>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
@@ -164,14 +164,14 @@
 		n5_E: n5_E {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht2 RCTL N5>, <&kp S(E)>;
+			bindings = <&ht2 RCTL N5>, <&kp LS(E)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		n6_F: n6_F {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht3 LALT N6>, <&kp S(F)>;
+			bindings = <&ht3 LALT N6>, <&kp LS(F)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
@@ -192,21 +192,21 @@
 		n4_D: n4_D {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp N4>, <&kp S(D)>;
+			bindings = <&kp N4>, <&kp LS(D)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		n2_B: n2_B {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp N2>, <&kp S(B)>;
+			bindings = <&kp N2>, <&kp LS(B)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		n3_C: n3_C {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp N3>, <&kp S(C)>;
+			bindings = <&kp N3>, <&kp LS(C)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
@@ -220,7 +220,7 @@
 		n1_A: n1_A {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp N1>, <&kp S(A)>;
+			bindings = <&kp N1>, <&kp LS(A)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 	};
