@@ -72,7 +72,7 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&ht4 LG(DOT) B	&quote_tds		&ht3 LC(S) W	&ht2 F2 F											&ht2 LC(P) U	&ht3 LC(LS(S)) Y &ht4 F1 J		&under_minus
+					&ht4 LG(DOT) B	&quote_tds		&ht3 LC(S) W	&ht2 F2 F											&ht2 LC(P) U	&ht3 LC(LS(S)) Y &under_minus 	&ht4 F1 J
 
 							&ht4 LGUI A		&ht3 LALT R		&ht2 LCTL S		&ht1 LC(N) P						&ht1 F5 L		&ht2 RCTL E		&ht3 LALT I		&ht4 RGUI O
 
