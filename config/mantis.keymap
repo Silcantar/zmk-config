@@ -78,7 +78,7 @@
 
 					&ht4 LC(Z) X	&ht3 LC(X) V	&ht2 LC(C) C	&ht1 LSFT T		&ht1a RALT G		&ht1a RALT M	&ht1 RSFT N		&ht2 LC(H) K	&comm_scln		&dot_cln
 
-											&kp ESC			&ht1 LC(V) D	&ht1a LC(LS(Z)) Q					&ht1a LC(Q) Z	&ht1 H LC(F)	&caps_word
+											&kp ESC			&ht1 LC(V) D	&ht1a LC(LS(Z)) Q					&ht1a LC(Q) Z	&ht1 LC(F) H	&caps_word
 
 													&ht0 LSFT RET	&kp SPACE		&ht0 LALT LS(TAB)	&ht0 RALT TAB	&kp BSPC		&ht0 RSHIFT DEL
 
