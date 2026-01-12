@@ -159,7 +159,7 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp PRINTSCREEN	&kp CAPS_LOCK	&caps_word		&kp END												&kp F4			&kp F7			&kp F10			&kp K_APP
+					&kp PRINTSCREEN	&kp CAPSLOCK	&caps_word		&kp END												&kp F4			&kp F7			&kp F10			&kp K_APP
 
 							&kp LEFT		&kp DOWN		&kp UP			&kp LC(RIGHT)						&kp F1			&ht2 RCTL F5	&ht3 LALT F8	&ht4 RGUI F11
 
