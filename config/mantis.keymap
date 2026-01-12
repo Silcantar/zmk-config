@@ -21,11 +21,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 
-#include "macros/macros.dtsi"
-#include "macros/unicode.dtsi"
+#include "behaviors/combos.dtsi"
 #include "behaviors/hold-tap.dtsi"
 #include "behaviors/mod-morph.dtsi"
 #include "behaviors/tap-dance.dtsi"
+#include "macros/macros.dtsi"
+#include "macros/unicode.dtsi"
 
 &mt {
 	tapping-term-ms = <250>;
@@ -59,7 +60,7 @@
 			//	|		X		|		V		|		C		|		T		|		G		|	|		M		|		N		|		K		|	   , ;		|	   . :		|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|27				|28	  Paste		|29	   Redo		|					|30	   Quit		|31	   Find		|32				|
-			//							|	   Esc		|				|				|					|				|				|	Caps Word	|
+			//							|	   Esc		|				|				|					|				|				|	  Delete	|
 			//							|				|		D		|		Q		|					|		Z		|		H		|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
 			//									|33	  LShift	|34				|35	   LAlt		|	|36	   RAlt		|37				|38				|
@@ -78,7 +79,7 @@
 
 					&ht4 LC(Z) X	&ht3 LC(X) V	&ht2 LC(C) C	&ht1 LSFT T		&ht1a RALT G		&ht1a RALT M	&ht1 RSFT N		&ht2 LC(H) K	&comm_scln		&dot_cln
 
-											&kp ESC			&ht1 LC(V) D	&ht1a LC(LS(Z)) Q					&ht1a LC(Q) Z	&ht1 LC(F) H	&caps_word
+											&kp ESC			&ht1 LC(V) D	&ht1a LC(LS(Z)) Q					&ht1a LC(Q) Z	&ht1 LC(F) H	&kp DELETE
 
 													&ht0 LSFT RET	&kp SPACE		&ht0 LALT LS(TAB)	&ht0 RALT TAB	&kp BSPC		&sk RSHIFT
 
@@ -133,15 +134,15 @@
 			display-name = "Navigate";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
-			//	|	   Find		|	Word Left	|	   Home		|		End		|									|		F4		|		F7		|	   F10		|	   Menu		|
+			//	|  Print Screen	|	Caps Lock	|	Caps Word	|	   Home		|									|		F4		|		F7		|	   F10		|	   Menu		|
 			//	|				|				|				|				|									|				|				|				|				|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
 			//			|				|				|				|				|					|				|				|				|				|
-			//			|	  Left		|	   Down		|		Up		|	Word Right	|					|		F1		|		F5		|		F8		|	   F11		|
+			//			|	  Left		|	   Down		|		Up		|	   End		|					|		F1		|		F5		|		F8		|	   F11		|
 			//			|				|				|				|				|					|				|				|				|				|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
 			//	|				|				|				|				|				|	|				|				|				|				|				|
-			//	|	   Undo		|	   Cut		|	   Copy		|	  Right		|	 Replace	|	|	 Page Up	|		F2		|		F6		|		F9		|	   F12		|
+			//	|	   Undo		|	   Cut		|	   Copy		|	  Right		|	 BT Next	|	|	 Page Up	|		F2		|		F6		|		F9		|	   F12		|
 			//	|				|				|				|				|				|	|				|				|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|				|				|				|					|				|				|				|
@@ -158,11 +159,11 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp PRINTSCREEN	&kp LC(LEFT)	&kp HOME		&kp END												&kp F4			&kp F7			&kp F10			&kp K_APP
+					&kp PRINTSCREEN	&kp CAPS_LOCK	&caps_word		&kp END												&kp F4			&kp F7			&kp F10			&kp K_APP
 
 							&kp LEFT		&kp DOWN		&kp UP			&kp LC(RIGHT)						&kp F1			&ht2 RCTL F5	&ht3 LALT F8	&ht4 RGUI F11
 
-					&ht4 LGUI LC(Z)	&ht3 LALT LC(X)	&ht2 LCTL LC(C)	&kp RIGHT		&ht1a RALT LC(H)	&ht1a RALT PGUP &ht1 RSFT F2	 &kp F6			&kp F9			&kp F12
+					&ht4 LGUI LC(Z)	&ht3 LALT LC(X)	&ht2 LCTL LC(C)	&kp RIGHT		&ht1a BT_NXT		&ht1a RALT PGUP 	&ht1 RSFT F2	 &kp F6			&kp F9			&kp F12
 
 											&trans			&ht1 LSFT LC(V)	&kp LC(LS(Z))						&kp PGDN		&kp F3			&trans
 
