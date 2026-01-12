@@ -224,7 +224,7 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		n1_A: n1_ndash {
+		n1_ndash: n1_ndash {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&ht1 LSFT N1>, <&ndash>;
