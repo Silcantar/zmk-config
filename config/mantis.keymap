@@ -62,9 +62,9 @@
 			//							|	   Esc		|				|				|					|				|				|	Caps Word	|
 			//							|				|		D		|		Q		|					|		Z		|		H		|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
-			//									|33	  LShift	|34				|35	   LAlt		|	|36	   RAlt		|37				|38	  RShift	|
-			//									|				|				|				|	|				|				|				|
-			//									|	  Return	|	  Space		|	   LTab		|	|	   RTab		|	Backspace	|	  Delete	|
+			//									|33	  LShift	|34				|35	   LAlt		|	|36	   RAlt		|37				|38				|
+			//									|				|				|				|	|				|				|	OS Shift	|
+			//									|	  Return	|	  Space		|	   LTab		|	|	   RTab		|	Backspace	|				|
 			//									'---------------'-------,-------'-------,-------'	'-------,-------'-------,-------'---------------'
 			//															|39				|					|40				|
 			//															|	 Numeric	|					|	 Function	|
@@ -80,7 +80,7 @@
 
 											&kp ESC			&ht1 LC(V) D	&ht1a LC(LS(Z)) Q					&ht1a LC(Q) Z	&ht1 LC(F) H	&caps_word
 
-													&ht0 LSFT RET	&kp SPACE		&ht0 LALT LS(TAB)	&ht0 RALT TAB	&kp BSPC		&ht0 RSHIFT DEL
+													&ht0 LSFT RET	&kp SPACE		&ht0 LALT LS(TAB)	&ht0 RALT TAB	&kp BSPC		&sk RSHIFT
 
 																			&td_num								&td_nav
 			>;
@@ -90,19 +90,19 @@
 			display-name = "Numeric";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
-			//	|		&		|	   \ |		|		!		|		^		|									|		8		|		9		|	   _ -		|	    *		|
+			//	|		=		|	   < >		|	   [ ]		|	   { }		|									|		!		|	 	&		|	   - _		|	   >		|
 			//	|				|				|				|				|									|				|				|				|				|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
 			//			|				|				|				|				|					|				|				|				|				|
-			//			|	   < >		|	   [ ]		|	   { }		|		%		|					|		7		|		1		|		2		|		3		|
+			//			|		7		|		5		|		3		|	   ( )		|					|		?		|		2		|		4		|		6		|
 			//			|				|				|				|				|					|				|				|				|				|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
 			//	|				|				|				|				|				|	|				|				|				|				|				|
-			//	|	   ` ~		|		#		|		$		|	   ( )		|		?		|	|		/		|		0		|		5		|		6		|	   . :		|
+			//	|		^		|		#		|		*		|		1		|		\		|	|		/		|		0		|		+		|	  trans		|	  trans		|
 			//	|				|				|				|				|				|	|				|				|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|				|				|				|					|				|				|				|
-			//							|	  trans		|		=		|		@		|					|		+		|		4		|	  trans		|
+			//							|	  trans		|		9		|		%		|					|		$		|		8		|	  trans		|
 			//							|				|				|				|					|				|				|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
 			//									|				|				|				|	|				|				|				|
@@ -115,13 +115,13 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&amp_intb		&kp BSLH		&excl_iexcl		&caret_deg											&n8_inf			&n9_micro		&kp MINUS   &star_mult
+					&equal_neq		&td_angle		&td_brack		&td_brace											&excl_iexcl		&amp_intb		&kp MINUS   &gt_gte
 
-							&td_angle		&td_brack		&td_brace		&percent_euro						&n7_sqrt		&n1_A			&n2_B			&n3_C
+							&n7_sqrt		&n5_euro		&n3_grave		&td_paren							&ques_iques		&n2_acute		&n4_tilde		&n6_pipe
 
-					&grave_acute	&hash_gbp		&dollar_cent	&td_paren		&qmark_iques		&slash_div		&n0_000			&n5_E			&n6_F		&dot_cln
+					&caret_deg		&hash_gbp		&star_mult		&n1_ndash		&bslh_micro			&slash_div		&n0_at			&plus_plmn			&trans		&trans
 
-											&trans			&equal_neq		&at_tilde							&plus_plmn		&n4_D			&trans
+											&trans			&n9_mdash		&percent_perm						&dollar_cent	&n8_inf			&trans
 
 													&trans			&trans			&trans				&trans			&trans			&trans
 
@@ -133,19 +133,19 @@
 			display-name = "Navigate";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
-			//	|	   Redo		|	   Top		|	   Home		|		Up		|									|	  Print		|	 Save As	|  Print Screen	|	   Help		|
+			//	|	   Find		|	Word Left	|	   Home		|		End		|									|		F4		|		F7		|	   F10		|	   Menu		|
 			//	|				|				|				|				|									|				|				|				|				|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
 			//			|				|				|				|				|					|				|				|				|				|
-			//			|	  Bottom	|	   Left		|	   Down		|	   End		|					|	 Refresh	|	   Edit		|	   Save		|	   Open		|
+			//			|	  Left		|	   Down		|		Up		|	Word Right	|					|		F1		|		F5		|		F8		|	   F11		|
 			//			|				|				|				|				|					|				|				|				|				|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
 			//	|				|				|				|				|				|	|				|				|				|				|				|
-			//	|	   Undo		|	   Cut		|	   Copy		|	  Right		|	 Page Up	|	|	  Symbol	|	   New		|	 Replace	|   Select All	|  Select Word	|
+			//	|	   Undo		|	   Cut		|	   Copy		|	  Right		|	 Replace	|	|	 Page Up	|		F2		|		F6		|		F9		|	   F12		|
 			//	|				|				|				|				|				|	|				|				|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|				|				|				|					|				|				|				|
-			//							|	  trans		|	  Paste		|	Page Down	|					|	  Close		|	   Find		|	  trans		|
+			//							|	  trans		|	  Paste		|	   Redo		|					|	Page Down	|		F3		|	  trans		|
 			//							|				|				|				|					|				|				|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
 			//									|				|				|				|	|				|				|				|
@@ -158,13 +158,13 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp LC(LS(Z))	&kp LC(HOME)	&kp HOME		&kp UP												&kp LC(P)		&kp F12			&kp PRINTSCREEN	&kp F1
+					&kp PRINTSCREEN	&kp LC(LEFT)	&kp HOME		&kp END												&kp F4			&kp F7			&kp F10			&kp K_APP
 
-							&kp LC(END)		&kp LEFT		&kp DOWN		&kp END								&kp F5			&ht2 RCTL F2	&ht3 LALT LC(S)	&ht4 RGUI LC(O)
+							&kp LEFT		&kp DOWN		&kp UP			&kp LC(RIGHT)						&kp F1			&ht2 RCTL F5	&ht3 LALT F8	&ht4 RGUI F11
 
-					&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp RIGHT		&kp PG_UP			&ht1a RALT LG(DOT) &ht1 RSFT LC(N) &kp LC(H)	&kp LC(A)		&sel_word
+					&ht4 LGUI LC(Z)	&ht3 LALT LC(X)	&ht2 LCTL LC(C)	&kp RIGHT		&ht1a RALT  LC(H)	&ht1a RALT PGUP &ht1 RSFT F2	 &kp F6			&kp F9			&F12
 
-											&trans			&kp LC(V)		&kp PG_DN							&kp LC(Q)		&kp LC(F)		&trans
+											&trans			&ht1 LSFT LC(V)	&kp LC(LS(Z))						&kp PGDN		&kp F3			&trans
 
 													&trans			&trans			&trans				&trans			&trans			&trans
 

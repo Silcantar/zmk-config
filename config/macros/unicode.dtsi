@@ -186,7 +186,7 @@
 				;
 		};
 
-		inf: infinty_sign {
+		inf: infinity_sign {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
@@ -208,6 +208,45 @@
 				, <&macro_tap &kp N2>
 				, <&macro_tap &kp N6>
 				, <&macro_tap &kp N0>
+				, <&compose_end>
+				;
+		};
+
+		perm: per_mille {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N0>
+				, <&macro_tap &kp N3>
+				, <&macro_tap &kp N0>
+				, <&compose_end>
+				;
+		};
+
+		gte: greater_than_or_equal {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N6>
+				, <&macro_tap &kp N5>
+				, <&compose_end>
+				;
+		};
+
+		lte: less_than_or_equal {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&compose_begin>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N2>
+				, <&macro_tap &kp N6>
+				, <&macro_tap &kp N4>
 				, <&compose_end>
 				;
 		};

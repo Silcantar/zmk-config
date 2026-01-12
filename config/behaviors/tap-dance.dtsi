@@ -18,7 +18,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <tap_term_pinky>;
-            bindings = <&angle>, <&oc_set LESS_THAN GREATER_THAN>;
+            bindings = <&lt_lte>, <&oc_set LESS_THAN GREATER_THAN>;
         };
 
         td_brack: tap_dance_square_brackets {
