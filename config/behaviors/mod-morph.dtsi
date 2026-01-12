@@ -185,7 +185,7 @@
 		n0_at: n0_at {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht1 RSFT N0>, <&kp AT;
+			bindings = <&ht1 RSFT N0>, <&kp AT>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
