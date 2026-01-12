@@ -94,7 +94,7 @@
 		percent_perm: percent_permille {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp PERCENT>, <&permille>;
+			bindings = <&kp PERCENT>, <&perm>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
