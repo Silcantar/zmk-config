@@ -117,7 +117,7 @@
 			bindings = <
 					&equal_neq		&td_angle		&td_brack		&td_brace											&excl_iexcl		&amp_intb		&kp MINUS   &gt_gte
 
-							&n7_sqrt		&n5_euro		&n3_grave		&td_paren							&ques_iques		&n2_acute		&n4_tilde		&n6_pipe
+							&n7_sqrt		&n5_euro		&n3_grave		&td_paren							&qmark_iques	&n2_acute		&n4_tilde		&n6_pipe
 
 					&caret_deg		&hash_gbp		&star_mult		&n1_ndash		&bslh_micro			&slash_div		&n0_at			&plus_plmn			&trans		&trans
 
