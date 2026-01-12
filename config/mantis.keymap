@@ -162,7 +162,7 @@
 
 							&kp LEFT		&kp DOWN		&kp UP			&kp LC(RIGHT)						&kp F1			&ht2 RCTL F5	&ht3 LALT F8	&ht4 RGUI F11
 
-					&ht4 LGUI LC(Z)	&ht3 LALT LC(X)	&ht2 LCTL LC(C)	&kp RIGHT		&ht1a RALT  LC(H)	&ht1a RALT PGUP &ht1 RSFT F2	 &kp F6			&kp F9			&F12
+					&ht4 LGUI LC(Z)	&ht3 LALT LC(X)	&ht2 LCTL LC(C)	&kp RIGHT		&ht1a RALT LC(H)	&ht1a RALT PGUP &ht1 RSFT F2	 &kp F6			&kp F9			&kp F12
 
 											&trans			&ht1 LSFT LC(V)	&kp LC(LS(Z))						&kp PGDN		&kp F3			&trans
 
