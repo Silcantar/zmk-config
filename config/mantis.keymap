@@ -7,7 +7,7 @@
 #define COL 0
 #define NUM 1
 #define NAV 2
-#define FUNC 3
+#define GAME 3
 
 #define tap_term_thumb 250
 #define tap_term_inner 250
@@ -33,13 +33,13 @@
 };
 
  / {
-	conditional_layers {
-		compatible = "zmk,conditional-layers";
-		tri_layer {
-			if-layers = <NUM NAV>;
-			then-layer = <FUNC>;
-		};
-	};
+	// conditional_layers {
+	// 	compatible = "zmk,conditional-layers";
+	// 	tri_layer {
+	// 		if-layers = <NUM NAV>;
+	// 		then-layer = <FUNC>;
+	// 	};
+	// };
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -142,7 +142,7 @@
 			//			|				|				|				|				|					|				|				|				|				|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
 			//	|				|				|				|				|				|	|				|				|				|				|				|
-			//	|	   Undo		|	   Cut		|	   Copy		|	  Right		|	 BT Next	|	|	 Page Up	|		F2		|		F6		|		F9		|	   F12		|
+			//	|	   Undo		|	   Cut		|	   Copy		|	  Right		|	  Game		|	|	 Page Up	|		F2		|		F6		|		F9		|	   F12		|
 			//	|				|				|				|				|				|	|				|				|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|				|				|				|					|				|				|				|
@@ -159,11 +159,11 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp PRINTSCREEN	&kp CAPSLOCK	&caps_word		&kp HOME												&kp F4			&kp F7			&kp F10			&kp K_APP
+					&kp PRINTSCREEN	&kp CAPSLOCK	&caps_word		&kp HOME											&kp F4			&kp F7			&kp F10			&kp K_APP
 
 							&kp LEFT		&kp DOWN		&kp UP			&kp END								&kp F1			&ht2 RCTL F5	&ht3 LALT F8	&ht4 RGUI F11
 
-					&ht4 LGUI LC(Z)	&ht3 LALT LC(X)	&ht2 LCTL LC(C)	&kp RIGHT		&ht1a BT_NXT		&ht1a RALT PGUP 	&ht1 RSFT F2	 &kp F6			&kp F9			&kp F12
+					&ht4 LGUI LC(Z)	&ht3 LALT LC(X)	&ht2 LCTL LC(C)	&kp RIGHT		&to GAME		&ht1a RALT PGUP 	&ht1 RSFT F2	 &kp F6			&kp F9			&kp F12
 
 											&trans			&ht1 LSFT LC(V)	&kp LC(LS(Z))						&kp PGDN		&kp F3			&trans
 
@@ -174,45 +174,45 @@
 		};
 
 		function {
-			display-name = "Function";
+			display-name = "Game";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
-			//	|	  Reset		|	   F23		|  Pause Break	|	   F11		|									|	   F12		| Studio Unlock	|	   F24		|   Bootloader	|
+			//	|	   Tab		|		1		|		2		|		3		|									|	   F12		| Studio Unlock	|	 BT Next	|   Bootloader	|
 			//	|				|				|				|				|									|				|				|				|				|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
 			//			|				|				|				|				|					|				|				|				|				|
-			//			|		F1		|		F2		|		F3		|	  Insert	|					|  Scroll Lock	|		F8		|		F9		|	   F10		|
+			//			|		E		|		A		|		W		|		4		|					|  Scroll Lock	|		8		|		9		|		0		|
 			//			|				|				|				|				|					|				|				|				|				|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
 			//	|				|				|				|				|				|	|				|				|				|				|				|
-			//	|	   F13		|	   F14		|	   F15		|		F4		|		F5		|	|		F6		|		F7		|	   F20		|	   F21		|	   F22	|
+			//	|	Caps Lock	|		Q		|		S		|		D		|		5		|	|		F6		|		7		|	   F20		|	   F21		|	   F22	|
 			//	|				|				|				|				|				|	|				|				|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|				|				|				|					|				|				|				|
-			//							|	  trans		|	   F16		|	   F17		|					|	   F18		|	   F19		|	  trans		|
+			//							|	 Escape		|		R		|		F		|					|		6		|	   F19		|	  trans		|
 			//							|				|				|				|					|				|				|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
 			//									|				|				|				|	|				|				|				|
-			//									|	  trans		|	  trans		|	  trans		|	|	  trans		|	  trans		|	  trans		|
+			//									|	 LShift		|	  Space		|	  LAlt		|	|	  trans		|	 Colemak	|	  trans		|
 			//									|				|				|				|	|				|				|				|
 			//									'---------------'-------,-------'-------,-------'	'-------,-------'-------,-------'---------------'
 			//															|				|					|				|
-			//															|	  trans		|					|	  trans		|
+			//															|	  LCtrl		|					|	  trans		|
 			//															|				|					|				|
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&sys_reset		&bt BT_PRV		&kp PAUSE_BREAK	&kp F11												&kp F12			&studio_unlock	&bt BT_NXT		&bootloader
+					&kp TAB			&kp N1			&kp N2			&kp N3												&kp F5			&studio_unlock	&bt BT_NXT		&bootloader
 
-							&ht4 LGUI F1	&ht3 LALT F2	&ht2 LCTL F3	&kp INSERT							&kp SCROLLLOCK	&ht2 RCTL F8	&ht3 LALT F9	&ht4 RGUI F10
+							&kp E			&kp A			&kp W			&kp N4								&kp F3			&kp N8			&kp N9			&kp N0
 
-					&kp F13			&kp F14			&kp F15			&ht1 LSFT F4	&ht1a RALT F5		&ht1a RALT F6	&ht1 RSFT F7	&kp F20			&kp F21			&kp F22
+					&kp CAPSLOCK	&kp Q			&kp S			&kp D			&kp 5				&kp N6			&kp N7			&kp F11			&kp F12			&kp F23
 
-											&trans			&kp F16			&kp F17								&kp F18			&kp F19			&trans
+											&kp ESC			&kp R			&kp F								&kp N6			&kp F8			&trans
 
-													&trans			&trans			&trans				&trans			&trans			&trans
+													&kp LSFT		&kp SPACE		&kp LALT			&trans			&to COL			&trans
 
-																			&trans								&trans
+																			&kp LCTL							&trans
 			>;
 		};
 
