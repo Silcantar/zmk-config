@@ -6,7 +6,7 @@
 		//	bindings = <&kp BACKSPACE>, <&kp DELETE>;
 		//	mods = <(MOD_LSFT|MOD_RSFT)>;
 		//};
-		
+
 		comm_scln: comma_semicolon {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -20,7 +20,7 @@
 			bindings = <&kp DOT>, <&kp COLON>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		
+
 		under_minus: underscore_minus {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -84,12 +84,12 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		caret_deg: caret_degree {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp CARET>, <&deg>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		// caret_deg: caret_degree {
+		// 	compatible = "zmk,behavior-mod-morph";
+		// 	#binding-cells = <0>;
+		// 	bindings = <&kp CARET>, <&deg>;
+		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
+		// };
 
 		percent_perm: percent_permille {
 			compatible = "zmk,behavior-mod-morph";
@@ -98,12 +98,12 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		grave_acute: grave_acute {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp GRAVE>, <&acute>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		// grave_acute: grave_acute {
+		// 	compatible = "zmk,behavior-mod-morph";
+		// 	#binding-cells = <0>;
+		// 	bindings = <&kp GRAVE>, <&acute>;
+		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
+		// };
 
 		hash_gbp: hash_gbp {
 			compatible = "zmk,behavior-mod-morph";
@@ -133,12 +133,12 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		at_tilde: at_tilde {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp AT>, <&kp TILDE>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		// at_tilde: at_tilde {
+		// 	compatible = "zmk,behavior-mod-morph";
+		// 	#binding-cells = <0>;
+		// 	bindings = <&kp AT>, <&kp TILDE>;
+		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
+		// };
 
 		n8_inf: n8_infinity {
 			compatible = "zmk,behavior-mod-morph";
@@ -175,12 +175,12 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		n6_pipe: n6_pipe {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&ht4 RGUI N6>, <&kp PIPE>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		// n6_pipe: n6_pipe {
+		// 	compatible = "zmk,behavior-mod-morph";
+		// 	#binding-cells = <0>;
+		// 	bindings = <&ht4 RGUI N6>, <&kp PIPE>;
+		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
+		// };
 
 		n0_at: n0_at {
 			compatible = "zmk,behavior-mod-morph";
@@ -196,24 +196,24 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		n4_tilde: n4_tilde {
+		n4_deg: n4_deg {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht3 LALT N4>, <&kp TILDE>;
+			bindings = <&ht3 LALT N4>, <&deg>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		n2_acute: n2_acute {
+		n2_tilde: n2_tilde {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht2 RCTL N2>, <&acute>;
+			bindings = <&ht2 RCTL N2>, <&kp TILDE>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		n3_grave: n3_grave {
+		n3_micro: n3_micro {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ht2 LCTL N3>, <&kp GRAVE>;
+			bindings = <&ht2 LCTL N3>, <&micro>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
@@ -231,11 +231,11 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		bslh_micro: backslash_micro {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&ht1a RALT BSLH>, <&micro>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		// bslh_micro: backslash_micro {
+		// 	compatible = "zmk,behavior-mod-morph";
+		// 	#binding-cells = <0>;
+		// 	bindings = <&ht1a RALT BSLH>, <&micro>;
+		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
+		// };
 	};
 };

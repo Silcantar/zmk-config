@@ -29,17 +29,17 @@
 #include "macros/unicode.dtsi"
 
 &mt {
-	tapping-term-ms = <250>;
+    tapping-term-ms = <250>;
 };
 
  / {
-	// conditional_layers {
-	// 	compatible = "zmk,conditional-layers";
-	// 	tri_layer {
-	// 		if-layers = <NUM NAV>;
-	// 		then-layer = <FUNC>;
-	// 	};
-	// };
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		tri_layer {
+			if-layers = <NUM NAV>;
+			then-layer = <GAME>;
+		};
+	};
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -81,7 +81,7 @@
 
 											&kp ESC			&ht1 LC(V) D	&ht1a LC(LS(Z)) Q					&ht1a LC(Q) Z	&ht1 LC(F) H	&kp DELETE
 
-													&ht0 LSFT RET	&kp SPACE		&ht0 LALT LS(TAB)	&ht0 RALT TAB	&kp BSPC		&sk RSHIFT
+													&ht0 LSFT RET	&kp SPACE		&ht0 F22 LS(TAB)	&ht0 F24 TAB	&kp BSPC		&sk RSHIFT
 
 																			&td_num								&td_nav
 			>;
@@ -118,9 +118,9 @@
 			bindings = <
 					&equal_neq		&td_angle		&td_brack		&td_brace											&excl_iexcl		&amp_intb		&kp MINUS   &gt_gte
 
-							&n7_sqrt		&n5_euro		&n3_grave		&td_paren							&qmark_iques	&n2_acute		&n4_tilde		&n6_pipe
+							&n7_sqrt		&n5_euro		&n3_grave		&td_paren							&qmark_iques	&n2_acute		&n4_tilde		&ht4 RGUI N6
 
-					&caret_deg		&hash_gbp		&star_mult		&n1_ndash		&bslh_micro			&slash_div		&n0_at			&plus_plmn			&trans		&trans
+					&kp GRAVE		&hash_gbp		&star_mult		&n1_ndash		&ht1a RALT BSLH		&slash_div		&n0_at			&plus_plmn			&trans		&trans
 
 											&trans			&n9_mdash		&percent_perm						&dollar_cent	&n8_inf			&trans
 
@@ -177,23 +177,23 @@
 			display-name = "Game";
 			//	,---------------,---------------,---------------,---------------,									,---------------,---------------,---------------,---------------,
 			//	|				|				|				|				|									|				|				|				|				|
-			//	|	   Tab		|		1		|		2		|		3		|									|	   F12		| Studio Unlock	|	 BT Next	|   Bootloader	|
+			//	|		E		|		1		|		2		|		3		|									|	   F12		| Studio Unlock	|	 BT Next	|   Bootloader	|
 			//	|				|				|				|				|									|				|				|				|				|
 			//	'-------,-------'-------,-------'-------,-------'-------,-------'-------,					,-------'-------,-------'-------,-------'-------,-------'-------,-------'
 			//			|				|				|				|				|					|				|				|				|				|
-			//			|		E		|		A		|		W		|		4		|					|  Scroll Lock	|		8		|		9		|		0		|
+			//			|		A		|		S		|		W		|		4		|					|  Scroll Lock	|		8		|		9		|		0		|
 			//			|				|				|				|				|					|				|				|				|				|
 			//	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'-------,-------'-------,
 			//	|				|				|				|				|				|	|				|				|				|				|				|
-			//	|	Caps Lock	|		Q		|		S		|		D		|		5		|	|		F6		|		7		|	   F20		|	   F21		|	   F22	|
+			//	|		6		|		7		|		8		|		D		|		5		|	|		F6		|		7		|	   F20		|	   F21		|	   F22	|
 			//	|				|				|				|				|				|	|				|				|				|				|				|
 			//	'---------------'-------,-------'-------,-------'-------,-------'-------,-------'	'-------,-------'-------,-------'-------,-------'-------,-------'---------------'
 			//							|				|				|				|					|				|				|				|
-			//							|	 Escape		|		R		|		F		|					|		6		|	   F19		|	  trans		|
+			//							|	 Escape		|		9		|		R		|					|		6		|	   F19		|	  trans		|
 			//							|				|				|				|					|				|				|				|
 			//							'-------,-------'-------,-------'-------,-------'-------,	,-------'-------,-------'-------,-------'-------,-------'
 			//									|				|				|				|	|				|				|				|
-			//									|	 LShift		|	  Space		|	  LAlt		|	|	  trans		|	 Colemak	|	  trans		|
+			//									|	 LShift		|	  Space		|	   Tab		|	|	  trans		|	 Colemak	|	  trans		|
 			//									|				|				|				|	|				|				|				|
 			//									'---------------'-------,-------'-------,-------'	'-------,-------'-------,-------'---------------'
 			//															|				|					|				|
@@ -202,15 +202,15 @@
 			//															'---------------'					'---------------'
 
 			bindings = <
-					&kp TAB			&kp N1			&kp N2			&kp N3												&kp F5			&studio_unlock	&bt BT_NXT		&bootloader
+					&kp E			&kp N1			&kp N2			&kp N3												&kp F5			&studio_unlock	&bt BT_NXT		&bootloader
 
-							&kp E			&kp A			&kp W			&kp N4								&kp F3			&kp N8			&kp N9			&kp N0
+							&kp A			&kp S			&kp W			&kp N4								&kp F3			&kp N8			&kp N9			&kp N0
 
-					&kp CAPSLOCK	&kp Q			&kp S			&kp D			&kp 5				&kp N6			&kp N7			&kp F11			&kp F12			&kp F23
+					&kp N6			&kp N7			&kp N8			&kp D			&kp N5				&kp N6			&kp N7			&kp F11			&kp F12			&kp F23
 
-											&kp ESC			&kp R			&kp F								&kp N6			&kp F8			&trans
+											&kp ESC			&kp N9			&kp R								&kp N6			&kp F8			&trans
 
-													&kp LSFT		&kp SPACE		&kp LALT			&trans			&to COL			&trans
+													&kp LSFT		&kp SPACE		&kp TAB				&trans			&to COL			&trans
 
 																			&kp LCTL							&trans
 			>;
