@@ -1,11 +1,5 @@
 / {
     behaviors {
-		//bspc_del: backspace_delete {
-		//	compatible = "zmk,behavior-mod-morph";
-		//	#binding-cells = <0>;
-		//	bindings = <&kp BACKSPACE>, <&kp DELETE>;
-		//	mods = <(MOD_LSFT|MOD_RSFT)>;
-		//};
 
 		comm_scln: comma_semicolon {
 			compatible = "zmk,behavior-mod-morph";
@@ -84,13 +78,6 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		// caret_deg: caret_degree {
-		// 	compatible = "zmk,behavior-mod-morph";
-		// 	#binding-cells = <0>;
-		// 	bindings = <&kp CARET>, <&deg>;
-		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
-		// };
-
 		percent_perm: percent_permille {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -98,12 +85,12 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		// grave_acute: grave_acute {
-		// 	compatible = "zmk,behavior-mod-morph";
-		// 	#binding-cells = <0>;
-		// 	bindings = <&kp GRAVE>, <&acute>;
-		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
-		// };
+		grave_acute: grave_acute {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp GRAVE>, <&acute>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
 		hash_gbp: hash_gbp {
 			compatible = "zmk,behavior-mod-morph";
@@ -132,13 +119,6 @@
 			bindings = <&kp EQUAL>, <&neq>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-
-		// at_tilde: at_tilde {
-		// 	compatible = "zmk,behavior-mod-morph";
-		// 	#binding-cells = <0>;
-		// 	bindings = <&kp AT>, <&kp TILDE>;
-		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
-		// };
 
 		n8_inf: n8_infinity {
 			compatible = "zmk,behavior-mod-morph";
@@ -174,13 +154,6 @@
 			bindings = <&ht3 LALT N5>, <&euro>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-
-		// n6_pipe: n6_pipe {
-		// 	compatible = "zmk,behavior-mod-morph";
-		// 	#binding-cells = <0>;
-		// 	bindings = <&ht4 RGUI N6>, <&kp PIPE>;
-		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
-		// };
 
 		n0_at: n0_at {
 			compatible = "zmk,behavior-mod-morph";
@@ -230,12 +203,5 @@
 			bindings = <&ht1 LSFT N1>, <&ndash>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-
-		// bslh_micro: backslash_micro {
-		// 	compatible = "zmk,behavior-mod-morph";
-		// 	#binding-cells = <0>;
-		// 	bindings = <&ht1a RALT BSLH>, <&micro>;
-		// 	mods = <(MOD_LSFT|MOD_RSFT)>;
-		// };
 	};
 };

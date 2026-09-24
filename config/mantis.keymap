@@ -118,9 +118,9 @@
 			bindings = <
 					&equal_neq		&td_angle		&td_brack		&td_brace											&excl_iexcl		&amp_intb		&kp MINUS   &gt_gte
 
-							&n7_sqrt		&n5_euro		&n3_grave		&td_paren							&qmark_iques	&n2_acute		&n4_tilde		&ht4 RGUI N6
+							&n7_sqrt		&n5_euro		&n3_micro		&td_paren							&qmark_iques	&n2_tilde		&n4_deg		&ht4 RGUI N6
 
-					&kp GRAVE		&hash_gbp		&star_mult		&n1_ndash		&ht1a RALT BSLH		&slash_div		&n0_at			&plus_plmn			&trans		&trans
+					&grave_acute	&hash_gbp		&star_mult		&n1_ndash		&ht1a RALT BSLH		&slash_div		&n0_at			&plus_plmn		&trans		&trans
 
 											&trans			&n9_mdash		&percent_perm						&dollar_cent	&n8_inf			&trans
 
