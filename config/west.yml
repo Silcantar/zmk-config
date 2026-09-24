@@ -12,8 +12,8 @@ manifest:
       url-base: https://github.com/invrtd
   projects:
     - name: zmk
-      remote: invrtd #zmkfirmware
-      revision: nice!view-180 #main
+      remote: zmkfirmware # invrtd #
+      revision: main # nice!view-180 #
       import: app/west.yml
     - name: nicehatharry
       remote: davidphilipbarr
