@@ -15,7 +15,9 @@
 		compose_end: end_unicode_compose_sequence {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			bindings = <&macro_release &kp COMPOSE_KEY>;
+			bindings =
+				<&macro_release &kp COMPOSE_KEY>,
+				<&macro_tap &kp RETURN>;
 		};
 
 		iexcl: inverted_exclamation {
