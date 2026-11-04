@@ -6,10 +6,10 @@ manifest:
       url-base: https://github.com/davidphilipbarr
     - name: Silcantar
       url-base: https://github.com/Silcantar
-    - name: urob
-      url-base: https://github.com/urob
-    - name: invrtd
-      url-base: https://github.com/invrtd
+    # - name: urob
+    #   url-base: https://github.com/urob
+    # - name: invrtd
+    #   url-base: https://github.com/invrtd
   projects:
     - name: zmk
       remote: zmkfirmware # invrtd #
@@ -23,8 +23,8 @@ manifest:
       remote: Silcantar
       clone-depth: 1
       revision: main
-    - name: zmk-helpers
-      remote: urob
-      revision: main
+    # - name: zmk-helpers
+    #   remote: urob
+    #   revision: main
   self:
     path: config

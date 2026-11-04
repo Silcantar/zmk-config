@@ -29,10 +29,10 @@
 #include "macros/unicode.dtsi"
 
 &mt {
-    tapping-term-ms = <250>;
+	tapping-term-ms = <250>;
 };
 
- / {
+/ {
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
 		tri_layer {
@@ -208,7 +208,7 @@
 
 					&kp N6			&kp N7			&kp N8			&kp D			&kp N5				&kp N6			&kp N7			&kp F11			&kp F12			&kp F23
 
-											&kp ESC			&kp N9			&kp R								&kp N6			&kp F8			&trans
+											&kp ESC			&kp N9			&kp R								&kp N6			&kp F8			&bt BT_CLR
 
 													&kp LSFT		&kp SPACE		&kp TAB				&trans			&to COL			&trans
 
